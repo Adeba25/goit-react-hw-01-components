@@ -7,7 +7,7 @@ import styles from './TransactionHistory.module.css';
 const TransactionHistory = ({ items = [] }) => (
   <table className={styles.transactionTable}>
     <thead>
-      <tr>
+      <tr className={styles.tableHead}>
         <th className={styles.title}>Type</th>
         <th className={styles.title}>Amount</th>
         <th className={styles.title}>Currency</th>
@@ -15,7 +15,7 @@ const TransactionHistory = ({ items = [] }) => (
     </thead>
     <tbody>
       {items.map(item => (
-        <tr key={item.id}>
+        <tr key={item.id} className = {styles.tableItem}>
           <td className={styles.item}>{item.type}</td>
           <td className={styles.item}>{item.amount}</td>
           <td className={styles.item}>{item.currency}</td>
